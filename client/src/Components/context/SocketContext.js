@@ -7,7 +7,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 
 const SocketContext = createContext();
 
-const socket=io('http://localhost:5000');
+const socket=io('https://interviewbuddyy.onrender.com');
 const ContextProvider = ({ children }) => {
 
     // const socket = io.connect('http://localhost:5000');
