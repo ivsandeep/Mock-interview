@@ -165,9 +165,11 @@ const Meet = (props) => {
             }
           </div>
         </div>
-        <div className='bar'>
-          <Options history={props.history} />
-        </div>
+         {
+          (<div className='bar'>
+            <Options history={props.history} />
+          </div>)
+        }
       </div>
       {!mobileView && showEditor && (
         <div className='right'>

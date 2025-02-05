@@ -66,7 +66,7 @@ const Options = (props) => {
 
   return (
     <>
-      <div className={showEditor ? ('bg-blue-900 w-full m-auto p-[10px] flex items-center justify-start space-x-5 rounded-tl-2 rounded-tr-2 rounded-bl-0 rounded-br-0 h-[50px]') : ('flex flex-row m-auto w-full bg-blue-900 h-[56px] items-center  justify-center')}>
+      <div className={showEditor ? ('bg-blue-900 w-full m-auto p-[10px] flex items-center justify-start space-x-5 rounded-tl-2 rounded-tr-2 rounded-bl-0 rounded-br-0 h-[50px]') : ('flex flex-row m-auto w-full bg-blue-800 h-[56px] items-center  justify-center')}>
 
         <div className='flex flex-row item-center justify-center'>
           {/* Switch */}
