@@ -113,7 +113,6 @@ const Meet = (props) => {
       </div>
     )
   }
-  console.log(me);
 
 
   return (
@@ -142,7 +141,6 @@ const Meet = (props) => {
                 <Spinner />
               )
               }
-
             </div>
             {
               callAccepted && !callEnded && (
@@ -188,9 +186,7 @@ const Meet = (props) => {
         </div>
       )}
       {meetingInfoCard && 
-        <div>
-
-        </div>
+    <div></div>
       }
 
     </div>

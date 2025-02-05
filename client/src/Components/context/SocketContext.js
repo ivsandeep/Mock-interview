@@ -7,7 +7,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 
 const SocketContext = createContext();
 
-const socket=io('https://interviewbuddyy.onrender.com');
+const socket=io('http://localhost:5000');
 const ContextProvider = ({ children }) => {
 
     // const socket = io.connect('http://localhost:5000');
@@ -15,6 +15,7 @@ const ContextProvider = ({ children }) => {
     // socket.connect();
     console.log(socket)
     const [socketState, setSocketState] = useState(socket);
+    // console.log(socketState)
     const [me, setMe] = useState('');
     const [newMeet, setNewMeet] = useState(false);
     const [call, setCall] = useState({});
@@ -248,6 +249,7 @@ const ContextProvider = ({ children }) => {
                 updateVideoStatus,
                 updateMicStatus,
                 socketState,
+                setSocketState,
             }}
         >
             {children}

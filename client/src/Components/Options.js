@@ -28,6 +28,7 @@ const Options = (props) => {
     showEditor,
     showChatBox,
     setShowChatBox,
+    socketState,
   } = useContext(SocketContext);
   console.log(me);
   const [open, setOpen] = useState(true);
@@ -59,16 +60,18 @@ const Options = (props) => {
     }
   }, [call, callEnded]);
 
-  console.log(call);
+  // console.log(call);
 
+  console.log(me);
 
-
-
+  const meetingId=me;
+  console.log(meetingId);
   return (
     <>
       <div className={showEditor ? ('bg-blue-900 w-full m-auto p-[10px] flex items-center justify-start space-x-5 rounded-tl-2 rounded-tr-2 rounded-bl-0 rounded-br-0 h-[50px]') : ('flex flex-row m-auto w-full bg-blue-800 h-[56px] items-center  justify-center')}>
-
+      <div className='text-xs bg-white p-1 m-1 rounded-md'>{meetingId}</div>
         <div className='flex flex-row item-center justify-center'>
+        
           {/* Switch */}
 
             {/* !mobileView && */}
@@ -102,7 +105,7 @@ const Options = (props) => {
           </div>
         </div>
 
-
+            
 
 
 

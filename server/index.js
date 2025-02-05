@@ -4,7 +4,9 @@ const server = require('http').createServer(app);
 const {Server}= require('socket.io');
 const cors = require('cors');
 const PORT = process.env.PORT || 5000;
+const path= require('path')
 app.use(cors());
+
 const io = new Server(server, {
     cors: {
         origin: 'http://localhost:3000',
@@ -13,8 +15,9 @@ const io = new Server(server, {
 });
 
 
-
-
+// -------------deployment
+const __dirname1=path.resolve();
+// if(pr)
 io.on('connection', (socket) => {
     socket.emit('me', socket.id);
     console.log('user connected');
